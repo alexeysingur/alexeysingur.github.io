@@ -8,21 +8,64 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&family=Roboto:wght@400;700&display=swap"
           rel="stylesheet">
     <style>
+        body {
+            background: black;
+            color: white;
+            display: flex;
+        }
+
+        .images {
+            width: 30%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .image {
+            height: 30%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .image_content {
+            width: 80%;
+            height: 80%;
+        }
+
+        .card {
+            width: 70%;
+            padding: 0 20%;
+        }
+
         .title {
             font-family: 'Open Sans', sans-serif;
             width: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .title__main {
             font-size: 24px;
             text-transform: uppercase;
             font-weight: bold;
             line-height: 2;
-            text-align: center;
+        }
+
+        .title__subtitle {
+            font-size: 18px;
+            text-transform: uppercase;
+            font-weight: bold;
+            line-height: 1.5;
         }
 
         .list {
             width: 100%;
-            height: auto;
-            padding: 10px 20px;
+            height: 100%;
+            padding: 20px 0 0;
             display: flex;
+            justify-content: space-evenly;
             flex-direction: column;
             font-family: 'Roboto', sans-serif;
         }
@@ -32,7 +75,12 @@
             height: max-content;
             display: flex;
             flex-direction: column;
+            align-items: center;
             margin-bottom: 30px;
+        }
+
+        .list-item:last-child {
+            margin-bottom: 0;
         }
 
         .list-item__title {
@@ -49,57 +97,74 @@
     </style>
 </head>
 <body>
-<div class="title">Барная карта</div>
-<div class="list">
-    <div class="list-item">
-        <div class="list-item__title">Мохито</div>
-        <div class="list-item__description">
-            (ром, мята, лайм, спрайт, лед)
-        </div>
+<div class="images">
+    <div class="image" style="background: yellow">
+        <img class="image_content" src="blue-lagoon-cocktail-svgrepo-com.svg"/>
     </div>
-    <div class="list-item">
-        <div class="list-item__title">Голубая лагуна</div>
-        <div class="list-item__description">
-            (водка, ликер блю кюрасао, спрайт/газированная вода)
-        </div>
+
+    <div class="image" style="background: red">
+        <img class="image_content" src="margarita-cocktail-svgrepo-com.svg"/>
     </div>
-    <div class="list-item">
-        <div class="list-item__title">Маргарита</div>
-        <div class="list-item__description">
-            (текила, апельсиновый ликер, сок лайма, лед)
-        </div>
-    </div>
-    <div class="list-item">
-        <div class="list-item__title">Текила санрайз</div>
-        <div class="list-item__description">
-            (текила, апельсиновый сок, гренадин, лед)
-        </div>
-    </div>
-    <div class="list-item">
-        <div class="list-item__title">Белый русский</div>
-        <div class="list-item__description">
-            (водка, кофейный ликер, сливки)
-        </div>
-    </div>
-    <div class="list-item">
-        <div class="list-item__title">Дайкири</div>
-        <div class="list-item__description">
-            (ром, сок лайма, сахарный сироп, лед)
-        </div>
-    </div>
-    <div class="list-item">
-        <div class="list-item__title">Отвертка</div>
-        <div class="list-item__description">
-            (водка, апельсиновый сок, лед)
-        </div>
-    </div>
-    <div class="list-item">
-        <div class="list-item__title">Б-52</div>
-        <div class="list-item__description">
-            (сливочный ликер, кофейный ликер, апельсиновый ликер)
-        </div>
+
+    <div class="image" style="background: green">
+        <img class="image_content" src="mojito-svgrepo-com.svg"/>
     </div>
 </div>
+<div class="card">
+    <div class="title">
+        <div class="title__main">Выпьем!</div>
+        <div class="title__subtitle">Барная карта мероприятия</div>
+    </div>
+    <div class="list">
+        <div class="list-item">
+            <div class="list-item__title">Мохито</div>
+            <div class="list-item__description">
+                (ром, мята, лайм, спрайт, лед)
+            </div>
+        </div>
+        <div class="list-item">
+            <div class="list-item__title">Голубая лагуна</div>
+            <div class="list-item__description">
+                (водка, ликер блю кюрасао, спрайт/газированная вода)
+            </div>
+        </div>
+        <div class="list-item">
+            <div class="list-item__title">Маргарита</div>
+            <div class="list-item__description">
+                (текила, апельсиновый ликер, сок лайма, лед)
+            </div>
+        </div>
+        <div class="list-item">
+            <div class="list-item__title">Текила санрайз</div>
+            <div class="list-item__description">
+                (текила, апельсиновый сок, гренадин, лед)
+            </div>
+        </div>
+        <div class="list-item">
+            <div class="list-item__title">Белый русский</div>
+            <div class="list-item__description">
+                (водка, кофейный ликер, сливки)
+            </div>
+        </div>
+        <div class="list-item">
+            <div class="list-item__title">Дайкири</div>
+            <div class="list-item__description">
+                (ром, сок лайма, сахарный сироп, лед)
+            </div>
+        </div>
+        <div class="list-item">
+            <div class="list-item__title">Отвертка</div>
+            <div class="list-item__description">
+                (водка, апельсиновый сок, лед)
+            </div>
+        </div>
+        <div class="list-item">
+            <div class="list-item__title">Б-52</div>
+            <div class="list-item__description">
+                (сливочный ликер, кофейный ликер, апельсиновый ликер)
+            </div>
+        </div>
+    </div>
 </div>
 </body>
 </html>
