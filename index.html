@@ -11,53 +11,31 @@
         body {
             background: black;
             color: white;
-            display: flex;
-        }
-
-        .images {
-            width: 30%;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .image {
-            height: 30%;
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .image_content {
-            width: 80%;
-            height: 80%;
-        }
-
-        .card {
-            width: 70%;
-            padding: 0 20%;
         }
 
         .title {
             font-family: 'Open Sans', sans-serif;
             width: 100%;
+            height: max-content;
             display: flex;
             flex-direction: column;
+            align-items: center;
+            color: #df3c3c;
         }
 
         .title__main {
-            font-size: 24px;
+            font-size: 32px;
             text-transform: uppercase;
             font-weight: bold;
             line-height: 2;
         }
 
         .title__subtitle {
-            font-size: 18px;
+            font-size: 26px;
             text-transform: uppercase;
             font-weight: bold;
             line-height: 1.5;
+            opacity: 0.7;
         }
 
         .list {
@@ -70,12 +48,31 @@
             font-family: 'Roboto', sans-serif;
         }
 
+        .list-section {
+            height: 25%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+        }
+
+        .list-section__image {
+            width: 20%;
+            height: auto;
+        }
+
+        .list-section__info {
+            width: 70%;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            padding: 0 10%;
+        }
+
         .list-item {
             width: 100%;
             height: max-content;
             display: flex;
             flex-direction: column;
-            align-items: center;
             margin-bottom: 30px;
         }
 
@@ -84,84 +81,92 @@
         }
 
         .list-item__title {
-            font-size: 20px;
+            font-size: 24px;
             line-height: 1.5;
             text-transform: capitalize;
             font-weight: bold;
         }
 
         .list-item__description {
-            font-size: 14px;
+            font-size: 18px;
             opacity: 0.7;
         }
     </style>
 </head>
 <body>
-<div class="images">
-    <div class="image" style="background: yellow">
-        <img class="image_content" src="blue-lagoon-cocktail-svgrepo-com.svg"/>
-    </div>
-
-    <div class="image" style="background: red">
-        <img class="image_content" src="margarita-cocktail-svgrepo-com.svg"/>
-    </div>
-
-    <div class="image" style="background: green">
-        <img class="image_content" src="mojito-svgrepo-com.svg"/>
-    </div>
+<div class="title">
+    <div class="title__main">Выпьем!</div>
+    <div class="title__subtitle">Барная карта мероприятия</div>
 </div>
-<div class="card">
-    <div class="title">
-        <div class="title__main">Выпьем!</div>
-        <div class="title__subtitle">Барная карта мероприятия</div>
+<div class="list">
+    <div class="list-section">
+        <img class="list-section__image" style="background: #aa40ae" src="mojito-svgrepo-com.svg"/>
+        <div class="list-section__info">
+            <div class="list-item">
+                <div class="list-item__title">Мохито</div>
+                <div class="list-item__description">
+                    ром, мята, лайм, спрайт, лед
+                </div>
+            </div>
+            <div class="list-item">
+                <div class="list-item__title">Голубая лагуна</div>
+                <div class="list-item__description">
+                    водка, ликер блю кюрасао, спрайт/газированная вода
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="list">
-        <div class="list-item">
-            <div class="list-item__title">Мохито</div>
-            <div class="list-item__description">
-                (ром, мята, лайм, спрайт, лед)
+
+    <div class="list-section">
+        <img class="list-section__image" style="background: #399639" src="tequila-sunrise-cocktail-svgrepo-com.svg"/>
+        <div class="list-section__info">
+            <div class="list-item">
+                <div class="list-item__title">Маргарита</div>
+                <div class="list-item__description">
+                    текила, апельсиновый ликер, сок лайма, лед
+                </div>
+            </div>
+            <div class="list-item">
+                <div class="list-item__title">Текила санрайз</div>
+                <div class="list-item__description">
+                    текила, апельсиновый сок, гренадин, лед
+                </div>
             </div>
         </div>
-        <div class="list-item">
-            <div class="list-item__title">Голубая лагуна</div>
-            <div class="list-item__description">
-                (водка, ликер блю кюрасао, спрайт/газированная вода)
+    </div>
+
+    <div class="list-section">
+        <img class="list-section__image" style="background: #bcbc45" src="margarita-cocktail-svgrepo-com.svg"/>
+        <div class="list-section__info">
+            <div class="list-item">
+                <div class="list-item__title">Белый русский</div>
+                <div class="list-item__description">
+                    водка, кофейный ликер, сливки
+                </div>
+            </div>
+            <div class="list-item">
+                <div class="list-item__title">Дайкири</div>
+                <div class="list-item__description">
+                    ром, сок лайма, сахарный сироп, лед
+                </div>
             </div>
         </div>
-        <div class="list-item">
-            <div class="list-item__title">Маргарита</div>
-            <div class="list-item__description">
-                (текила, апельсиновый ликер, сок лайма, лед)
+    </div>
+
+    <div class="list-section">
+        <img class="list-section__image" style="background: #b74646" src="blue-lagoon-cocktail-svgrepo-com.svg"/>
+        <div class="list-section__info">
+            <div class="list-item">
+                <div class="list-item__title">Отвертка</div>
+                <div class="list-item__description">
+                    водка, апельсиновый сок, лед
+                </div>
             </div>
-        </div>
-        <div class="list-item">
-            <div class="list-item__title">Текила санрайз</div>
-            <div class="list-item__description">
-                (текила, апельсиновый сок, гренадин, лед)
-            </div>
-        </div>
-        <div class="list-item">
-            <div class="list-item__title">Белый русский</div>
-            <div class="list-item__description">
-                (водка, кофейный ликер, сливки)
-            </div>
-        </div>
-        <div class="list-item">
-            <div class="list-item__title">Дайкири</div>
-            <div class="list-item__description">
-                (ром, сок лайма, сахарный сироп, лед)
-            </div>
-        </div>
-        <div class="list-item">
-            <div class="list-item__title">Отвертка</div>
-            <div class="list-item__description">
-                (водка, апельсиновый сок, лед)
-            </div>
-        </div>
-        <div class="list-item">
-            <div class="list-item__title">Б-52</div>
-            <div class="list-item__description">
-                (сливочный ликер, кофейный ликер, апельсиновый ликер)
+            <div class="list-item">
+                <div class="list-item__title">Б-52</div>
+                <div class="list-item__description">
+                    сливочный ликер, кофейный ликер, апельсиновый ликер
+                </div>
             </div>
         </div>
     </div>
